@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+<body>
+    <h1>Recrutamento</h1>
+    <div id="msg"></div>
+    <script>
+        let candidato = "";
+        let qtdcandidato = Number(0);
+        let prom = 0;
+        let totalidade = Number(0);
+        while (prom < 999) {
+            let numcandidato = prompt("Digite o Número do Candidato\nDigite 0 para sair.");
+            if (numcandidato !== "0") {
+                let idade = Number(prompt("Digite a Idade do Candidato."));
+                let sexo = prompt("Digite o Sexo do Candidato.\n1. Masculino\n2. Feminino")
+                let experiencia = prompt("Tem Experiência Profissional?\n1. Sim\n2. Não")
+                if (idade >= 18) {
+                    if (sexo === "1") {
+                    if (experiencia === "1") {
+                        candidato += "Número do Candidato: " + numcandidato + "<br>Idade do Candidato: " + idade + "<br>Sexo do Candidato: Masculino<br>Experiência Profissional: Sim<br>---------<br>";
+                        qtdcandidato++;
+                        totalidade += idade;
+                    } 
+                }
+                if (sexo === "2") {
+                    if (experiencia === "1") {
+                        candidato += "Número do Candidato: " + numcandidato + "<br>Idade do Candidato: " + idade + "<br>Sexo do Candidato: Feminino<br>Experiência Profissional: Sim<br>---------<br>";
+                        qtdcandidato++;
+                        totalidade += idade;
+                    }
+                }   
+                }
+            }
+            if (numcandidato === "0") {
+                prom = 1000
+            }
+            let mediaidade = totalidade / qtdcandidato
+            document.getElementById("msg").innerHTML = "Número total de Candidatos: " + qtdcandidato + "<br>Média de Idade: " + mediaidade + "<br>---------<br>" + candidato;
+        }
+    </script>
+</body>
+
+</html>
+
+<!--
+    else {
+                        candidato += "Número do Candidato: " + numcandidato + "<br>Idade do Candidato: " + idade + "<br>Sexo do Candidato: Masculino<br>Experiência Profissional: Não<br>---------<br>";
+                        qtdcandidato++;
+                        totalidade += idade;
+                    }
+
+
+     else {
+                        candidato += "Número do Candidato: " + numcandidato + "<br>Idade do Candidato: " + idade + "<br>Sexo do Candidato: Feminino<br>Experiência Profissional: Não<br>---------<br>";
+                        qtdcandidato++;
+                        totalidade += idade;
+                    }
+-->

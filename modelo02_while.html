@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo While</title>
+</head>
+<body>
+    <h1>Usando o While para repetir palavras</h1>
+    <div id="palavra"></div>
+    <br>
+    <div id="palavra2"></div>
+    <br>
+    <div id="palavra3"></div>
+    <br>
+    <div id="palavra4"></div>
+    <script>
+        let contador = 0;
+        while (contador < 10) {
+            let word = "Brasil1";
+            document.getElementById("palavra").innerHTML += word + "</br>";
+            contador++;
+        }
+        let contador2 = 0
+        do{
+            let word2 = "Brasil2";
+            document.getElementById("palavra2").innerHTML += word2 + "</br>";
+            contador2++;
+        }while (contador2 < 10);
+
+        for (let contador3 = 0; contador3 < 10; contador3++) {
+            let word3 = "";
+            word3 += "Brasil3"
+            document.getElementById("palavra3").innerHTML += word3 + "<br>";
+        }
+    </script>
+</body>
+</html>

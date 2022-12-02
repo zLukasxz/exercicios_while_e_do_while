@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+
+<body>
+    <h1>Cadastro de Peças</h1>
+    <div id="msg"></div>
+    <script>
+        let qualidade = "";
+        let numpecatotal = 0;
+        let pecaaprovada = 0;
+        let pecareprovada = 0;
+        while (numpecatotal < 5) {
+            let numpeca = prompt("Digite o Número da peça");
+            let qualpeca = prompt("A peça está aprovada ou reprovada?\n1. Aprovada\n2. Reprovada")
+            if (qualpeca === "1") {
+                pecaaprovada++;
+                numpecatotal++;
+            }else{
+                qualidade += numpeca + " - ";
+                pecareprovada++;
+                numpecatotal++;
+            }
+            document.getElementById("msg").innerHTML = "Total de Peças: " + numpecatotal + "<br>Total de Peças Aprovadas: " + pecaaprovada + "<br>Total de Peças Reprovadas: " + pecareprovada + "<br>Peças Reprovadas: " + qualidade;
+        }
+    </script>
+</body>
+
+</html>

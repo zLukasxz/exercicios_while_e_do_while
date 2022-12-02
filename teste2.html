@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Senha - Erro Limitado</title>
+</head>
+
+<body>
+    <h1>Limite de Erros para a Senha</h1>
+    <div id="msg"></div>
+    <script>
+        let senha = "1234";
+        let word = "";
+        let tentativas = 0;
+        while (tentativas < 3) {
+            let senha1 = prompt("Digite a Senha. \nNúmero de Tentativas: " + tentativas);
+            let word = ""
+            if (senha1 === senha) {
+                tentativas = 4;
+                word = "Seja Bem-Vindo!"
+                document.getElementById("msg").innerHTML = word
+            }else{
+                tentativas++
+                word = "Senha Incorreta!"
+                document.getElementById("msg").innerHTML = word
+            }
+        }
+    </script>
+</body>
+
+</html>
